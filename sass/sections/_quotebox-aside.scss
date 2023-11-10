@@ -1,0 +1,43 @@
+.box {
+
+    &__aside {
+        height: 80%;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: white;
+
+            div {
+                height: 100%;
+                width: 30%;
+                z-index: 2;
+                background:
+                    repeating-linear-gradient(
+                        #301934 0px,
+                        #301934 10px,
+                        transparent 10px,
+                        transparent 45px
+                    );
+            }
+    }
+
+    &__aside::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transform: translate(-50%);
+        z-index: 2;
+        background: 
+            repeating-linear-gradient(
+                transparent,
+                transparent 3px,
+                #301934 3px,
+                #301934 7px,
+                transparent 7px,
+                transparent 45px
+            );
+    }
+}

@@ -1,0 +1,41 @@
+@use 'functions';
+
+.box__button {
+    position: absolute;
+    font-family: 'Caveat', cursive;
+
+    &--tweet {
+        top: 100%;
+        left: 0;
+        transform: translate(0, -100%);
+        width: functions.toRem(300);
+        height: functions.toRem(300);
+        overflow: hidden;
+        z-index: 1;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 20%;
+            left: -20%;
+        }
+    }
+
+    &--next {
+        border: none;
+        background-color: transparent;
+        width: min-content;
+        height: min-content;
+        top: 100%;
+        right: 2%;
+        transform: translate(0, -100%);
+
+        img {
+            display: block;
+            width: functions.toRem(40);
+        }
+    }
+}
+

@@ -1,0 +1,130 @@
+@use '../components/functions';
+@use '../components/mixins';
+
+.coffee {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: start;
+
+    &__saucer {
+        border: functions.toRem(3) solid white;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background-color: #02C3FD;
+        position: relative;
+        margin-left: functions.toRem(20);
+    }
+
+    &__cup {
+        border: functions.toRem(6) solid white;
+        height: 70%;
+        width: 70%;
+        border-radius: 50%;
+        @include mixins.center;
+        background-color: #D1AE89;
+    }
+
+    &__grip {
+        width: functions.toRem(32);
+        height: functions.toRem(17);
+        border-radius: functions.toRem(10) 0 0 functions.toRem(10);
+        background-color: white;
+        position: absolute;
+        left: 70%;
+        top: 25%;
+        transform-origin: right center;
+        transform: rotate(160deg);
+    }
+
+    &__liquid {
+        position: absolute;
+        width: 85%;
+        height: 85%;
+        background-color: #3D2417;
+        border-radius: 50%;
+        overflow: hidden;
+        @include mixins.center;
+    }
+
+    &__reflection {
+        position: absolute;
+        width: 93%;
+        height: 93%;
+        background-color: #5C4C41;
+        border-radius: 50%;
+        @include mixins.center;
+    }
+
+    &__filler {
+        position: absolute;
+        width: 115%;
+        height: 80%;
+        border-radius: 50%;
+        top: 0;
+        background-color: #3D2417;
+        @include mixins.center;
+    }
+
+    &__foam {
+        display: block;
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        height: functions.toRem(40);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    &__drop {
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        background-color: #3D2417;
+        z-index: 10;
+
+        &--small {
+            width: functions.toRem(5);
+        }
+
+        &--large {
+            width: functions.toRem(10);
+        }
+    }
+
+    &__drop:nth-of-type(1) {
+        top: 25%;
+        left: 36%;
+    }
+    &__drop:nth-of-type(2) {
+        top: 12%;
+        left: 70%;
+        
+    }
+    &__drop:nth-of-type(3) {
+        left: 72%;
+        top: 24%;
+    }
+    &__drop:nth-of-type(4) {
+        left: 32%;
+        top: 10%;
+    }
+    &__drop:nth-of-type(5) {
+        left: 45%;
+        top: 14%;
+    }
+    &__drop:nth-of-type(6) {
+        left: 80%;
+        top: 30%
+    }
+    &__drop:nth-of-type(7) {
+        left: 20%;
+        top: 20%
+    }
+    &__drop:nth-of-type(8) {
+        left: 55%;
+        top: 7%;
+    }
+
+}

@@ -1,0 +1,54 @@
+@use '../components/functions';
+
+.box {
+
+    &__main {
+        height: 100%;
+        width: 90%;
+        padding: functions.toRem(18) functions.toRem(18) functions.toRem(18) functions.toRem(2);
+        border-radius: 0 functions.toRem(10) functions.toRem(10);
+        background:
+            // white spaces - top and bottom
+            linear-gradient(
+                #fff,
+                #fff 6%,
+                transparent 6%,
+                transparent 94%,
+                #fff 94%,
+                #fff 100%
+            ),
+            // white spaces - left and right side
+            repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 94%,
+                #fff 94%,
+                #fff 100%
+            ),
+            // black lines 
+            repeating-linear-gradient(
+                #301934 0px,
+                #301934 2px,
+                #fff 2px,
+                #fff 25px
+            );
+    }
+
+    &__title {
+        text-align: center;
+        font-size: functions.toRem(30);
+        font-weight: 700;
+    }
+
+    &__quote {
+        padding: functions.toRem(20);
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__author {
+        text-align: right;
+    }
+}

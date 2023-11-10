@@ -1,0 +1,15 @@
+@use '../components/functions';
+
+.box {
+    border: functions.toRem(1) solid black;
+    border-radius: 0 functions.toRem(10) functions.toRem(10) 0;
+    width: 90%;
+    height: 70%;
+    margin-left: functions.toRem(10);
+    display: flex;
+    align-items: center;
+    font-family: 'Caveat', cursive;
+    font-size: functions.toRem(20);
+    position: relative;
+    background-color: white;
+}
