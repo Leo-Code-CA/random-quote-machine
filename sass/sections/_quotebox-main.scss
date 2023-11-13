@@ -7,6 +7,7 @@
         width: 90%;
         padding: functions.toRem(18) functions.toRem(18) functions.toRem(18) functions.toRem(2);
         border-radius: 0 functions.toRem(10) functions.toRem(10);
+        backface-visibility: hidden;
         background:
             // white spaces - top and bottom
             linear-gradient(
@@ -47,6 +48,10 @@
     &__text {
         text-align: center;
     }
+
+    // &__text::before, &__text::after {
+    //     content: '"';
+    // }
 
     &__author {
         text-align: right;

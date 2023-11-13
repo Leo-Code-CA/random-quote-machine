@@ -1,10 +1,10 @@
 @use '../components/functions';
 
 .box {
-    border: functions.toRem(1) solid black;
-    border-radius: 0 functions.toRem(10) functions.toRem(10) 0;
     width: 90%;
     height: 70%;
+    border: functions.toRem(1) solid black;
+    border-radius: 0 functions.toRem(10) functions.toRem(10) 0;
     margin-left: functions.toRem(10);
     display: flex;
     align-items: center;
@@ -12,4 +12,40 @@
     font-size: functions.toRem(20);
     position: relative;
     background-color: white;
+
+   
+    perspective:2000px;
+    transform-style: preserve-3d;
+
+    &__sheet {
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transform-origin: left;
+        display: flex;
+        align-items: center;
+        background-color: white;
+
+
+
+        &--current {
+
+            z-index: 1;
+            transition: transform 1s ease-in-out;
+            transform: rotateY(0deg);
+
+        }
+
+        &--next {
+
+            transform: rotateY(0deg);
+
+        }
+    }
+}
+
+.flip {
+    transform: rotateY(-359deg);
 }
