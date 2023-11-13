@@ -1,11 +1,28 @@
 @use '../components/functions';
 @use '../components/mixins';
 
+
 .coffee {
     width: 100%;
     height: 25%;
     display: flex;
     justify-content: start;
+
+    &__steam {
+        position: absolute;
+        left: 50%;
+        top: -7%;
+        width: 300%;
+        height: 100%;
+        // border: 1px solid;
+        z-index: 3;
+
+        img {
+            display: block;
+            position: absolute;
+            top: -125%;
+        }
+    }
 
     &__saucer {
         border: functions.toRem(3) solid white;

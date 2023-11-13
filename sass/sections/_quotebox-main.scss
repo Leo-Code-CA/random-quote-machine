@@ -51,4 +51,8 @@
     &__author {
         text-align: right;
     }
+
+    &__author::before {
+        content: '- ';
+    }
 }
