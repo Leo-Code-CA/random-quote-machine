@@ -1,4 +1,5 @@
 @use '../components/functions';
+@use '../variables';
 
 .box {
 
@@ -11,27 +12,27 @@
         background:
             // white spaces - top and bottom
             linear-gradient(
-                #fff,
-                #fff 6%,
+                variables.$white,
+                variables.$white 6%,
                 transparent 6%,
                 transparent 94%,
-                #fff 94%,
-                #fff 100%
+                variables.$white 94%,
+                variables.$white 100%
             ),
             // white spaces - left and right side
             repeating-linear-gradient(
                 90deg,
                 transparent,
                 transparent 94%,
-                #fff 94%,
-                #fff 100%
+                variables.$white 94%,
+                variables.$white 100%
             ),
             // black lines 
             repeating-linear-gradient(
-                #301934 0px,
-                #301934 2px,
-                #fff 2px,
-                #fff 25px
+                variables.$dark-gray,
+                variables.$dark-gray functions.toRem(2),
+                variables.$white functions.toRem(2),
+                variables.$white functions.toRem(25)
             );
     }
 
@@ -49,9 +50,9 @@
         text-align: center;
     }
 
-    // &__text::before, &__text::after {
-    //     content: '"';
-    // }
+    &__text::before, &__text::after {
+        content: ' " ';
+    }
 
     &__author {
         text-align: right;

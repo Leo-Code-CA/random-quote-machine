@@ -1,3 +1,6 @@
+@use '../variables';
+@use '../components/functions';
+
 .box {
 
     &__aside {
@@ -7,7 +10,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        background-color: white;
+        background-color: variables.$white;
 
             div {
                 height: 100%;
@@ -15,10 +18,10 @@
                 z-index: 2;
                 background:
                     repeating-linear-gradient(
-                        #301934 0px,
-                        #301934 10px,
-                        transparent 10px,
-                        transparent 45px
+                        variables.$black,
+                        variables.$black functions.toRem(10),
+                        transparent functions.toRem(10),
+                        transparent functions.toRem(45)
                     );
             }
     }
@@ -33,11 +36,11 @@
         background: 
             repeating-linear-gradient(
                 transparent,
-                transparent 3px,
-                #301934 3px,
-                #301934 7px,
-                transparent 7px,
-                transparent 45px
+                transparent functions.toRem(3),
+                variables.$black functions.toRem(3),
+                variables.$black functions.toRem(7),
+                transparent functions.toRem(7),
+                transparent functions.toRem(45)
             );
     }
 }

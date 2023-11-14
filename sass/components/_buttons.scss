@@ -3,11 +3,11 @@
 .box__button {
     position: absolute;
     font-family: 'Caveat', cursive;
+    top: 100%;
+    transform: translate(0, -100%);
 
     &--tweet {
-        top: 100%;
         left: 0;
-        transform: translate(0, -100%);
         width: functions.toRem(300);
         height: functions.toRem(300);
         overflow: hidden;
@@ -24,14 +24,12 @@
     }
 
     &--next {
-        border: none;
-        background-color: transparent;
+        right: 2%;
         width: min-content;
         height: min-content;
-        top: 100%;
-        right: 2%;
-        transform: translate(0, -100%);
-
+        border: none;
+        background-color: transparent;
+        
         img {
             display: block;
             width: functions.toRem(40);

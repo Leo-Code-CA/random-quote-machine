@@ -1,24 +1,22 @@
 @use '../components/functions';
+@use '../variables';
 
 .box {
     width: 90%;
     height: 70%;
-    border: functions.toRem(1) solid black;
+    border: functions.toRem(1) solid variables.$black;
     border-radius: 0 functions.toRem(10) functions.toRem(10) 0;
     margin-left: functions.toRem(10);
     display: flex;
     align-items: center;
-    font-family: 'Caveat', cursive;
+    font-family: variables.$handwriting;
     font-size: functions.toRem(20);
     position: relative;
-    background-color: white;
-
-   
-    perspective:2000px;
+    background-color: variables.$white;
+    perspective: functions.toRem(2000);
     transform-style: preserve-3d;
 
     &__sheet {
-
         width: 100%;
         height: 100%;
         position: absolute;
@@ -26,22 +24,16 @@
         transform-origin: left;
         display: flex;
         align-items: center;
-        background-color: white;
-
-
+        background-color: variables.$white;
 
         &--current {
-
             z-index: 1;
             transition: transform 1s ease-in-out;
             transform: rotateY(0deg);
-
         }
 
         &--next {
-
             transform: rotateY(0deg);
-
         }
     }
 }
