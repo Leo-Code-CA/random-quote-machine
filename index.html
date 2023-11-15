@@ -12,11 +12,12 @@
         <link rel="icon" type="image/x-icon" href="images/freecodecamplogo.svg">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap">
         <link rel="stylesheet" href="CSS/main-min.css">
-        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
-        <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+        <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+        <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script> -->
         <script src="js/main.js"></script>
+        <script src="js/mapResizer.min.js"></script>
     </head>
 
     <body>
@@ -62,9 +63,27 @@
                             <blockquote id="text" class="box__text"></blockquote>
                             <figcaption id="author" class="box__author"></figcaption>
                         </figure>
-                        <a target="_blank" id="tweet-quote" href="https://twitter.com/intent/tweet?text=Hi%20folks%2C%0AI%20found%20this%20quote%20so%20inspiring%20that%20it%20would%20have%20been%20sad%20not%20to%20share%20it.%0ACheers%21%0A" class="box__button box__button--tweet">
-                            <img src="images/twitterlogo.png" alt="twitter logo" width="100">
-                        </a>
+                        
+
+                        <div class="box__button box__button--tweet">
+
+
+
+                            <img src="images/twitterlogo.png" usemap="#image_map">
+                            <map name="image_map">
+                              <area alt="twitter logo" href="https://twitter.com/intent/tweet?text=Hi%20folks%2C%0AI%20found%20this%20quote%20so%20inspiring%20that%20it%20would%20have%20been%20sad%20not%20to%20share%20it.%0ACheers%21%0A" coords="959,691 980,509 1070,379 1214,298 1375,275 1619,384 1823,305 1705,495 1873,450 1705,623 1664,942 1461,1352 1248,1551 940,1690 623,1726 367,1688 118,1563 398,1529 599,1420 294,1222 303,1148 393,1136 178,980 149,779 253,807 149,554 185,421 940,713 942,710 " shape="polygon">
+                            </map>
+                            <script>
+                                imageMapResize();
+                            </script>
+
+
+
+
+                        </div>
+
+
+
                         <button id="new-quote" class="box__button box__button--next">
                             <img src="images/arrow.svg" alt="arrow icon" width="40">
                         </button>
@@ -81,9 +100,26 @@
                             <blockquote class="box__text"></blockquote>
                             <figcaption class="box__author"></figcaption>
                         </figure>
-                        <a target="_blank" href="https://twitter.com/intent/tweet?text=Hi%20folks%2C%0AI%20found%20this%20quote%20so%20inspiring%20that%20it%20would%20have%20been%20sad%20not%20to%20share%20it.%0ACheers%21%0A" class="box__button box__button--tweet">
-                            <img src="images/twitterlogo.png" alt="twitter logo" width="100">
-                        </a>
+
+
+                        <div class="box__button box__button--tweet">
+
+
+
+                            <img src="images/twitterlogo.png" usemap="#image_map">
+                            <map name="image_map">
+                              <area alt="twitter logo" href="https://twitter.com/intent/tweet?text=Hi%20folks%2C%0AI%20found%20this%20quote%20so%20inspiring%20that%20it%20would%20have%20been%20sad%20not%20to%20share%20it.%0ACheers%21%0A" coords="959,691 980,509 1070,379 1214,298 1375,275 1619,384 1823,305 1705,495 1873,450 1705,623 1664,942 1461,1352 1248,1551 940,1690 623,1726 367,1688 118,1563 398,1529 599,1420 294,1222 303,1148 393,1136 178,980 149,779 253,807 149,554 185,421 940,713 942,710 " shape="polygon">
+                            </map>
+                            <script>
+                                imageMapResize();
+                            </script>
+
+
+
+
+                        </div>
+
+
                         <button class="box__button box__button--next">
                             <img src="images/arrow.svg" alt="arrow icon" width="40">
                         </button>
@@ -99,3 +135,9 @@
     
 </html>
 
+
+
+
+<!-- <a target="_blank" href="https://twitter.com/intent/tweet?text=Hi%20folks%2C%0AI%20found%20this%20quote%20so%20inspiring%20that%20it%20would%20have%20been%20sad%20not%20to%20share%20it.%0ACheers%21%0A" class="box__button box__button--tweet">
+    <img src="images/twitterlogo.png" alt="twitter logo" width="100">
+</a> -->

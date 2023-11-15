@@ -2,8 +2,9 @@
 @use '../variables';
 
 .box {
-    width: 90%;
-    height: 70%;
+    width: min(90%, functions.toRem(450));
+    aspect-ratio: 337.5 / 437;
+    height: auto;
     border: functions.toRem(1) solid variables.$black;
     border-radius: 0 functions.toRem(10) functions.toRem(10) 0;
     margin-left: functions.toRem(10);

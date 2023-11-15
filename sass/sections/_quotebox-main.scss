@@ -8,15 +8,18 @@
         width: 90%;
         padding: functions.toRem(18) functions.toRem(18) functions.toRem(18) functions.toRem(2);
         border-radius: 0 functions.toRem(10) functions.toRem(10);
+        // fix that 
         backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
         background:
             // white spaces - top and bottom
             linear-gradient(
                 variables.$white,
-                variables.$white 6%,
-                transparent 6%,
-                transparent 94%,
-                variables.$white 94%,
+                variables.$white 7%,
+                transparent 7%,
+                transparent 93%,
+                variables.$white 93%,
                 variables.$white 100%
             ),
             // white spaces - left and right side

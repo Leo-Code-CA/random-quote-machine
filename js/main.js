@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // API URL to fetch the quotes 
-    const API_URL = "https://api.quotable.io/quotes/random?minLength=100&maxLength=200";
+    const API_URL = "https://api.quotable.io/quotes/random?minLength=100&maxLength=150";
 
     // Fetch API to get the data needed to fill the text and author elements
     const contentUpdate = () => {

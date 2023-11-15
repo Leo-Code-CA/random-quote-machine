@@ -8,19 +8,25 @@
 
     &--tweet {
         left: 0;
-        width: functions.toRem(300);
-        height: functions.toRem(300);
+        // width: functions.toRem(300);
+        // height: functions.toRem(300);
+        width: 68%;
+        height: auto;
+        max-height: 50%;
+        aspect-ratio: 1 / 1;
         overflow: hidden;
         z-index: 1;
 
         img {
             display: block;
-            width: 100%;
+            width: 150%;
             height: auto;
             position: absolute;
-            top: 20%;
-            left: -20%;
+            top: -15%;
+            left: -39%;
         }
+
+        
     }
 
     &--next {
@@ -33,7 +39,11 @@
         img {
             display: block;
             width: functions.toRem(40);
+            cursor: pointer;
         }
     }
 }
 
+area {
+    cursor: pointer;
+}
