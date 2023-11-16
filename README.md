@@ -1,4 +1,4 @@
-# Frontend Mentor - Interactive rating component solution
+# Front End Development Libraries Project 1 - FreeCodeCamp
 
 This is a responsive random quote machine. It’s part of the required projects to complete FreeCodeCamp’s Front End Development Libraries certification.
 
@@ -37,13 +37,12 @@ The exact requirements:
 
 ### Screenshot
 
-![State 1:](./images/random_quote_machine_mobile.jpg)
-![State 2:](./images/random_quote_machine_tablet.jpg)
+![State 1:](./images/random_quote_machine_mobile.jpg) ![State 2:](./images/random_quote_machine_tablet.jpg)
 ![State 3:](./images/random_quote_machine_desktop.jpg)
 
 ### Links
 
-- Challenge URL: [Solution URL](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine)
+- Challenge URL: [Challenge URL](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine)
 - Live Site URL: [Live site URL](https://leo-code-ca.github.io/random-quote-machine/)
 
 ## My process

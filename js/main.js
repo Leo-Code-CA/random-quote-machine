@@ -5,12 +5,12 @@ $(document).ready(function() {
 
     // Fetch API to get the data needed to fill the text and author elements
     const contentUpdate = () => {
-        $.get( API_URL, function( data ) {
-            // If it's the first page (no content yet), fill the it (current page)
+        $.get( API_URL, function(data) {
+            // If it's the first page (no content on it yet), fill it
             if ($('.box__text').html() === "") {
                 $(".box__sheet--current .box__text").html(data[0].content);
                 $(".box__sheet--current .box__author").html(data[0].author);
-            // If it's not the first page (content on the current page), fill the next page
+            // If it's not the first page (there is some content on the current page), fill the next one
             } else {
                 $(".box__sheet--next .box__text").html(data[0].content);
                 $(".box__sheet--next .box__author").html(data[0].author);
@@ -31,30 +31,28 @@ $(document).ready(function() {
         setTimeout(changeClass, 1000);
     });
 
-    // Update IDs depending on the elements' sheet state (current or next)
+    // Update IDs depending on the sheet state (current or next)
     const changeID = (myclass, myID) => {
         $(myclass).map(function() {
             $(this).attr('id', (this.id == myID ? 'next-' + myID : myID));
         })
     }
 
-    // Update classes when the sheet flips to get ready the next one 
+    // Update classes when the sheet flips (to get ready the next one)
     const changeClass = () => {
         // Switch classes between the current and the next sheet
         $('.box__sheet').toggleClass('box__sheet--current');
         $('.box__sheet').toggleClass('box__sheet--next');
-        // Reposition the sheet to its initial place (no rotation)
+        // Reposition the sheet to its initial position (no rotation)
         $('.box__sheet--next').removeClass('flip');
         // Call the function with the different arguments to update the IDs
         changeID('.box__sheet', 'quote-box');
         changeID('.box__text', 'text');
         changeID('.box__author', 'author');
-        changeID('.box__button--tweet', 'tweet-quote');
+        changeID('.box__button--tweet a', 'tweet-quote');
         changeID('.box__button--next', 'new-quote');
-        // Call the API to update text and author
+        // Fetch API to update text and author
         contentUpdate();
     }
 
 });
-
-// add the tweet id to the change 

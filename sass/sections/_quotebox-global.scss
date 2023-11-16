@@ -7,7 +7,7 @@
     height: auto;
     border: functions.toRem(1) solid variables.$black;
     border-radius: 0 functions.toRem(10) functions.toRem(10) 0;
-    margin-left: functions.toRem(10);
+    // margin-left: functions.toRem(10);
     display: flex;
     align-items: center;
     font-family: variables.$handwriting;
@@ -25,7 +25,7 @@
 
     @media (min-width: 62em) {
         width: min(40%, functions.toRem(500));
-        margin-left: functions.toRem(50);
+        // margin-left: functions.toRem(50);
         font-size: functions.toRem(29);
     }
 
