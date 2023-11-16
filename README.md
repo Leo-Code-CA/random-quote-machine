@@ -37,8 +37,11 @@ The exact requirements:
 
 ### Screenshot
 
-![State 1:](./images/random_quote_machine_mobile.jpg) ![State 2:](./images/random_quote_machine_tablet.jpg)
-![State 3:](./images/random_quote_machine_desktop.jpg)
+<div>
+    <img src="./images/random_quote_machine_mobile.jpg" alt="random machine quote mobile version" style="width: 45%">
+    <img src="./images/random_quote_machine_tablet.jpg" alt="random machine quote tablet version" style="width: 54%">
+    <img src="./images/random_quote_machine_desktop.jpg" alt="random machine quote desktop version" style="width: 100%">
+</div>
 
 ### Links
 
