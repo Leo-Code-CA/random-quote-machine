@@ -2,31 +2,28 @@
 
 .box__button {
     position: absolute;
-    font-family: 'Caveat', cursive;
     top: 100%;
     transform: translate(0, -100%);
 
     &--tweet {
-        left: 0;
-        // width: functions.toRem(300);
-        // height: functions.toRem(300);
+        left: -11%;
         width: 68%;
         height: auto;
-        max-height: 50%;
         aspect-ratio: 1 / 1;
         overflow: hidden;
         z-index: 1;
+        backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
 
         img {
             display: block;
-            width: 150%;
+            width: 120%;
             height: auto;
             position: absolute;
-            top: -15%;
-            left: -39%;
+            top: 0;
+            left: -30%;
         }
-
-        
     }
 
     &--next {
@@ -40,10 +37,10 @@
             display: block;
             width: functions.toRem(40);
             cursor: pointer;
+
+            @media (min-width: 75em) {
+                width: functions.toRem(50);
+            }
         }
     }
-}
-
-area {
-    cursor: pointer;
 }

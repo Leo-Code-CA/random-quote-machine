@@ -18,13 +18,22 @@ body {
 }
 
 main {
-    height: 100vh;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     flex-direction: column;
     gap: functions.toRem(10);
-    // min-width: functions.toRem(375);
-    // max-width: functions.toRem(1600);
+
+    @media (min-width: 36em) {
+        gap: functions.toRem(30);
+    }
+
+    @media (min-width: 62em) {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    @media (min-width: 87.5em) {
+        max-width: functions.toRem(1450);
+    }
 }

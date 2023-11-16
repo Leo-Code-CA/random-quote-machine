@@ -1,7 +1,6 @@
 // USE COMPONENTS
 @use 'components/functions';
 @use 'components/buttons';
-@use 'components/typography';
 @use 'components/mixins';
 
 // USE SECTIONS
@@ -13,16 +12,16 @@
 
 
 // // Small devices (landscape phones, 576px and up)
-// @media (min-width: 576px) { ... }
+// @media (min-width: 576px) { ... } 36em
 
 // // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) { ... }
+// @media (min-width: 768px) { ... } 48em
 
 // // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) { ... }
+// @media (min-width: 992px) { ... } 62em
 
 // // X-Large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
+// @media (min-width: 1200px) { ... } 75em
 
 // // XX-Large devices (larger desktops, 1400px and up)
-// @media (min-width: 1400px) { ... }
+// @media (min-width: 1400px) { ... } ????????????????????????

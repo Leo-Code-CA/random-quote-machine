@@ -1,5 +1,6 @@
 @use '../components/functions';
 @use '../variables';
+@use '../components/mixins';
 
 .box {
 
@@ -8,41 +9,39 @@
         width: 90%;
         padding: functions.toRem(18) functions.toRem(18) functions.toRem(18) functions.toRem(2);
         border-radius: 0 functions.toRem(10) functions.toRem(10);
-        // fix that 
         backface-visibility: hidden;
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        background:
-            // white spaces - top and bottom
-            linear-gradient(
-                variables.$white,
-                variables.$white 7%,
-                transparent 7%,
-                transparent 93%,
-                variables.$white 93%,
-                variables.$white 100%
-            ),
-            // white spaces - left and right side
-            repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 94%,
-                variables.$white 94%,
-                variables.$white 100%
-            ),
-            // black lines 
-            repeating-linear-gradient(
-                variables.$dark-gray,
-                variables.$dark-gray functions.toRem(2),
-                variables.$white functions.toRem(2),
-                variables.$white functions.toRem(25)
-            );
+        transform-style: preserve-3d;
+        @include mixins.notebook-bg(functions.toRem(25));
+
+        @media (min-width: 62em) {
+            @include mixins.notebook-bg(functions.toRem(32))
+        }
+
+        @media (min-width: 75em) {
+            @include mixins.notebook-bg(functions.toRem(40));
+        }
+        
     }
 
     &__title {
         text-align: center;
         font-size: functions.toRem(30);
         font-weight: 700;
+
+        @media (min-width: 36em) {
+            font-size: functions.toRem(32);
+        }
+
+        @media (min-width: 62em) {
+            font-size: functions.toRem(45) ;
+        }
+
+        @media (min-width: 75em) {
+            font-size: functions.toRem(55);
+            margin-bottom: functions.toRem(15);
+        }
     }
 
     &__quote {
@@ -51,10 +50,23 @@
 
     &__text {
         text-align: center;
+
+        @media (min-width: 36em) {
+            line-height: 1.13;
+        }
+
+        @media (min-width: 62em) {
+            line-height: 1.1;
+        }
+
+        @media (min-width: 75em) {
+            line-height: 1.18;
+        }
+
     }
 
     &__text::before, &__text::after {
-        content: ' " ';
+        content: '"';
     }
 
     &__author {

@@ -1,8 +1,65 @@
-// ABSOLUTE CENTERING
+@use '../variables';
+@use '../components/functions';
 
+// ABSOLUTE CENTERING
 @mixin center {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+// NOTEBOOK BACKGROUND LINES 
+@mixin notebook-bg($line-space) {
+
+    background:
+        // white spaces - top and bottom
+        linear-gradient(
+            variables.$white,
+            variables.$white 7%,
+            transparent 7%,
+            transparent 93%,
+            variables.$white 93%,
+            variables.$white 100%
+        ),
+        // white spaces - left and right side
+        linear-gradient(
+            90deg,
+            transparent,
+            transparent 94%,
+            variables.$white 94%,
+            variables.$white 100%
+        ),
+        // black lines 
+        repeating-linear-gradient(
+            variables.$dark-gray,
+            variables.$dark-gray functions.toRem(2),
+            variables.$white functions.toRem(2),
+            variables.$white $line-space 
+        );
+
+}
+
+// NOTEBOOK BACKGROUND HOLES
+@mixin notebook-holes($hole-size) {
+    background:
+        repeating-linear-gradient(
+            variables.$black,
+            variables.$black $hole-size,
+            transparent $hole-size,
+            transparent functions.toRem(45)
+        );
+}
+
+// NOTEBOOK BACKGROUND SPIRALS
+@mixin notebook-spirals($spiral-size) {
+    background: 
+        repeating-linear-gradient(
+            transparent,
+            transparent functions.toRem(3),
+            variables.$black functions.toRem(3),
+            variables.$black $spiral-size,
+            transparent $spiral-size,
+            transparent functions.toRem(45)
+        );
 }

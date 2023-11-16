@@ -1,10 +1,11 @@
 @use '../variables';
 @use '../components/functions';
+@use '../components/mixins';
 
 .box {
 
     &__aside {
-        height: 75%;
+        height: 85%;
         width: 10%;
         display: flex;
         justify-content: center;
@@ -12,18 +13,24 @@
         position: relative;
         background-color: variables.$white;
 
-            div {
-                height: 100%;
-                width: 30%;
-                z-index: 2;
-                background:
-                    repeating-linear-gradient(
-                        variables.$black,
-                        variables.$black functions.toRem(10),
-                        transparent functions.toRem(10),
-                        transparent functions.toRem(45)
-                    );
+        @media (min-width: 75em) {
+            height: 87%;
+        }
+
+        div {
+            height: 100%;
+            width: 30%;
+            z-index: 2;
+            @include mixins.notebook-holes(functions.toRem(10));
+
+            @media (min-width: 36em) {
+                @include mixins.notebook-holes(functions.toRem(12));
             }
+
+            @media (min-width: 75em) {
+                @include mixins.notebook-holes(functions.toRem(15));
+            }
+        }
     }
 
     &__aside::before {
@@ -33,14 +40,18 @@
         position: absolute;
         transform: translate(-50%);
         z-index: 2;
-        background: 
-            repeating-linear-gradient(
-                transparent,
-                transparent functions.toRem(3),
-                variables.$black functions.toRem(3),
-                variables.$black functions.toRem(7),
-                transparent functions.toRem(7),
-                transparent functions.toRem(45)
-            );
+        @include mixins.notebook-spirals(functions.toRem(6.5));
+
+        @media (min-width: 36em) {
+            @include mixins.notebook-spirals(functions.toRem(7));
+        }
+
+        @media (min-width: 62em) {
+            @include mixins.notebook-spirals(functions.toRem(8.5))
+        }
+
+        @media (min-width: 75em) {
+            @include mixins.notebook-spirals(functions.toRem(10))
+        }
     }
 }

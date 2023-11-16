@@ -2,7 +2,7 @@
 @use '../variables';
 
 .box {
-    width: min(90%, functions.toRem(450));
+    width: min(90%, functions.toRem(300));
     aspect-ratio: 337.5 / 437;
     height: auto;
     border: functions.toRem(1) solid variables.$black;
@@ -16,7 +16,23 @@
     background-color: variables.$white;
     perspective: functions.toRem(2000);
     transform-style: preserve-3d;
+    align-self: center;
 
+    @media (min-width: 36em) {
+        width: min(50%, functions.toRem(350));
+        font-size: functions.toRem(21);
+    }
+
+    @media (min-width: 62em) {
+        width: min(40%, functions.toRem(500));
+        margin-left: functions.toRem(50);
+        font-size: functions.toRem(29);
+    }
+
+    @media (min-width: 75em) {
+        font-size: functions.toRem(33);
+    }
+    
     &__sheet {
         width: 100%;
         height: 100%;
