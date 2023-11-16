@@ -2,6 +2,10 @@
 
 This is a responsive random quote machine. It’s part of the required projects to complete FreeCodeCamp’s Front End Development Libraries certification.
 
+There are two branches in this project: 
+- main: the project passes the 12 FreeCodeCamp tests. It means that the requirements have been respected. 
+- desktop-with-coffee: in that second version, with a desktop viewport, the coffee is still visible, positioned beside the notebook (passes only 11 out of the 12 tests, that's why it's not the main).
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -38,6 +42,7 @@ The exact requirements:
 ### Screenshot
 
 <div>
+    <img src="./images/random_quote_machine_test.jpg" alt="random machine quote test" style="width: 100%">
     <img src="./images/random_quote_machine_mobile.jpg" alt="random machine quote mobile version" style="width: 45%">
     <img src="./images/random_quote_machine_tablet.jpg" alt="random machine quote tablet version" style="width: 54%">
     <img src="./images/random_quote_machine_desktop.jpg" alt="random machine quote desktop version" style="width: 100%">

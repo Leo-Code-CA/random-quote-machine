@@ -17,9 +17,7 @@
     }
 
     @media (min-width: 62em) {
-        width: auto;
-        height: auto;
-        order: 2;
+        display: none;
     }
 
     &__steam {
@@ -34,19 +32,6 @@
         @media (min-width: 36em) {
             width: 50%;
             left: 50%;
-        }
-
-        @media (min-width: 62em) {
-            height: 30%;
-            width: 170%;
-            transform: rotate(-90deg);
-            top: 10%;
-            left: -40%;
-        }
-
-        @media (min-width: 87.5em) {
-            width: 200%;
-            left: -50%;
         }
 
         img {
@@ -78,16 +63,6 @@
             border: functions.toRem(5) solid variables.$white;
             max-height: functions.toRem(225);
         }
-
-        @media (min-width: 62em) {
-            height: functions.toRem(275);
-            margin-left: 0;
-            border: functions.toRem(7) solid variables.$white;
-        }
-
-        @media (min-width: 75em) {
-            height: functions.toRem(300);
-        }
     }
 
     &__cup {
@@ -100,10 +75,6 @@
 
         @media (min-width: 36em) {
             border: functions.toRem(8) solid variables.$white;
-        }
-
-        @media (min-width: 62em) {
-            border: functions.toRem(12) solid variables.$white;
         }
     }
 
@@ -123,19 +94,6 @@
             height: functions.toRem(20);
             left: 60%;
         }
-
-        @media (min-width: 62em) {
-            width: functions.toRem(45);
-            height: functions.toRem(25);
-            left: 68%;
-        }
-
-        @media (min-width: 75em) {
-            width: functions.toRem(48);
-            height: functions.toRem(28);
-            left: 65%;
-        }
-        
     }
 
     &__liquid {
@@ -183,20 +141,11 @@
         z-index: 10;
 
         &--small {
-            width: functions.toRem(5);
-
-            @media (min-width: 75em) {
-                width: functions.toRem(7);
-            }
-            
+            width: functions.toRem(5); 
         }
 
         &--large {
             width: functions.toRem(10);
-
-            @media (min-width: 75em) {
-                width: functions.toRem(12);
-            }
         }
     }
 
